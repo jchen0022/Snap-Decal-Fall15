@@ -920,6 +920,11 @@ SpriteMorph.prototype.initBlocks = function () {
             category: 'operators',
             spec: '%n + %n'
         },
+        reportFloorDiv: {
+            type: 'reporter',
+            category: 'operators',
+            spec: '%n // %n'
+        },
         reportDifference: {
             type: 'reporter',
             category: 'operators',
@@ -1295,10 +1300,11 @@ SpriteMorph.prototype.blockAlternatives = {
     reportMouseY: ['reportMouseX'],
 
     // operators:
-    reportSum: ['reportDifference', 'reportProduct', 'reportQuotient'],
-    reportDifference: ['reportSum', 'reportProduct', 'reportQuotient'],
-    reportProduct: ['reportDifference', 'reportSum', 'reportQuotient'],
-    reportQuotient: ['reportDifference', 'reportProduct', 'reportSum'],
+    reportSum: ['reportDifference', 'reportProduct', 'reportQuotient', 'reportFloorDiv'],
+    reportFloorDiv: ['reportDifference', 'reportProduct', 'reportQuotient', 'reportSum'],
+    reportDifference: ['reportSum', 'reportProduct', 'reportQuotient', 'reportFloorDiv'],
+    reportProduct: ['reportDifference', 'reportSum', 'reportQuotient', 'reportFloorDiv'],
+    reportQuotient: ['reportDifference', 'reportProduct', 'reportSum', 'reportFloorDiv'],
     reportLessThan: ['reportEquals', 'reportGreaterThan'],
     reportEquals: ['reportLessThan', 'reportGreaterThan'],
     reportGreaterThan: ['reportEquals', 'reportLessThan'],
@@ -1977,6 +1983,7 @@ SpriteMorph.prototype.blockTemplates = function (category) {
         blocks.push('#');
         blocks.push('-');
         blocks.push(block('reportSum'));
+        blocks.push(block('reportFloorDiv'));
         blocks.push(block('reportDifference'));
         blocks.push(block('reportProduct'));
         blocks.push(block('reportQuotient'));
@@ -5509,6 +5516,7 @@ StageMorph.prototype.blockTemplates = function (category) {
         blocks.push('#');
         blocks.push('-');
         blocks.push(block('reportSum'));
+        blocks.push(block('reportFloorDiv'));
         blocks.push(block('reportDifference'));
         blocks.push(block('reportProduct'));
         blocks.push(block('reportQuotient'));
