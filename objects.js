@@ -1300,7 +1300,7 @@ SpriteMorph.prototype.blockAlternatives = {
     reportMouseY: ['reportMouseX'],
 
     // operators:
-    reportSum: ['reportDifference', 'reportProduct', 'reportQuotient', 'reportFloorDiv'],
+    reportSum: ['reportDifference', 'reportProduct', 'reportQuotient', 'reportFloorDv'],
     reportFloorDiv: ['reportDifference', 'reportProduct', 'reportQuotient', 'reportSum'],
     reportDifference: ['reportSum', 'reportProduct', 'reportQuotient', 'reportFloorDiv'],
     reportProduct: ['reportDifference', 'reportSum', 'reportQuotient', 'reportFloorDiv'],
