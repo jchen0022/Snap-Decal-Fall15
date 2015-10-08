@@ -2007,7 +2007,7 @@ Process.prototype.reportSum = function (a, b) {
     return +a + (+b);
 };
 
-Process.prototype.reportFloorDv = function(a, b) {
+Process.prototype.reportFloorDiv = function(a, b) {
     var x = +a,
         y = +b;
     return Math.floor(x/y)
