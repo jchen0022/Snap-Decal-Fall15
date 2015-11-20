@@ -2651,71 +2651,85 @@ IDE_Morph.prototype.projectMenu = function () {
         'Select a sound from the media library'
     );
     menu.addLine();
+    menu.addItem(
+      localize('Toggle Hints'),
+      function() {
+          target = BlockMorph.prototype;
+          if(target.toggle == true){
+            target.toggle = false;
+          }
+          else{
+            target.toggle = true;
+          };  
+        },
+      'Toggle bubble hints on/off'
+  )
+    menu.addLine();
     player_name = "Video Player";
     video_player = document.getElementById('thePlayer');
     menu.addItem(
-        player_name,
-	function() {
-		if (video_player){
-			video_player.style.zIndex = 5000;
-			ytPlayer = document.getElementById('player');
-			ytPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-		}
-		else {
-			var player;
-			function embedVideo() {
-				var parent = document.createElement('div')
-				parent.id = "thePlayer"
-				parent.style.position = 'fixed'
-				parent.style.zIndex = 5000;
-				parent.style.right = 0;
-				parent.style.bottom = 0
-				parent.style.opacity = 0.2
-				var div = document.createElement('div')
-				div.id = "player"
-				parent.appendChild(div)
-				document.body.appendChild(parent)
-				parent.onmouseover = function() {
-					console.log('mouse')
-					parent.style.opacity = 1
-				}
-				parent.onmouseout = function() {
-					parent.style.opacity = 0.2
-				}
-				parent.style.webkitTransition = 'opacity 0.3s ease-in-out'
-				parent.style.transition = 'opacity 0.3s ease-in-out'
+      player_name,
+      function() {
+        if (video_player){
+          video_player.style.zIndex = 5000;
+          ytPlayer = document.getElementById('player');
+          ytPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+        else {
+          var player;
+          function embedVideo() {
+            var parent = document.createElement('div')
+            parent.id = "thePlayer"
+            parent.style.position = 'fixed'
+            parent.style.zIndex = 5000;
+            parent.style.right = 0;
+            parent.style.bottom = 0
+            parent.style.opacity = 0.2
+            var div = document.createElement('div')
+            div.id = "player"
+            parent.appendChild(div)
+            document.body.appendChild(parent)
+            parent.onmouseover = function() {
+              console.log('mouse')
+              parent.style.opacity = 1
+            }
+            parent.onmouseout = function() {
+              parent.style.opacity = 0.2
+            }
+            parent.style.webkitTransition = 'opacity 0.3s ease-in-out'
+            parent.style.transition = 'opacity 0.3s ease-in-out'
 
-				var tag = document.createElement('script');
-				tag.id = "playerScript";
+            var tag = document.createElement('script');
+            tag.id = "playerScript";
 
-				tag.src = "https://www.youtube.com/iframe_api";
-				console.log("src test");
-				var firstScriptTag = document.body.appendChild(tag);
-				console.log("src test");
-				// 3. This function creates an <iframe> (and YouTube player)
-				//    after the API code downloads.
-				function onYouTubeIframeAPIReady() {
-					console.log('player test');
-					player = new YT.Player('player', {
-						height: '200',
-						width: '305',
-						videoId: '1JjKrxjzIZQ',
-						events: {
-							'onReady': onPlayerReady,
-						}
-					});
-				}
-				window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady
-			}
-			function onPlayerReady(event) {
-				console.log('ready')
-				event.target.playVideo();
-			}
+            tag.src = "https://www.youtube.com/iframe_api";
+            console.log("src test");
+            var firstScriptTag = document.body.appendChild(tag);
+            console.log("src test");
+            // 3. This function creates an <iframe> (and YouTube player)
+            //    after the API code downloads.
+            function onYouTubeIframeAPIReady() {
+              console.log('player test');
+              player = new YT.Player('player', {
+                height: '200',
+                width: '305',
+                videoId: '1JjKrxjzIZQ',
+                events: {
+                  'onReady': onPlayerReady,
+                }
+              });
+            }
+            window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady
+          }
+          function onPlayerReady(event) {
+            console.log('ready')
+            event.target.playVideo();
+          }
 
-			embedVideo();
-		};
-        },
-        'Launch the awesome video player.'
+          embedVideo();
+        };
+            },
+      'Launch the awesome video player.'
     );
     menu.addItem(
 	'Remove Video',

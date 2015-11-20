@@ -185,54 +185,10 @@ var ArgLabelMorph;
 var TextSlotMorph;
 var ScriptFocusMorph;
 
-WorldMorph.prototype.customMorphs = function () {
-    // add examples to the world's demo menu
+// TriggerMorph ////////////////////////////////////////////////////////
 
-    return [];
+// I provide basic button functionality
 
-/*
-    return [
-        new SymbolMorph(
-            'pipette',
-            50,
-            new Color(250, 250, 250),
-            new Point(-1, -1),
-            new Color(20, 20, 20)
-        )
-    ];
-*/
-/*
-    var sm = new ScriptsMorph();
-    sm.setExtent(new Point(800, 600));
-
-    return [
-        new SymbolMorph(),
-        new HatBlockMorph(),
-        new CommandBlockMorph(),
-        sm,
-        new CommandSlotMorph(),
-        new CSlotMorph(),
-        new InputSlotMorph(),
-        new InputSlotMorph(null, true),
-        new BooleanSlotMorph(),
-        new ColorSlotMorph(),
-        new TemplateSlotMorph('foo'),
-        new ReporterBlockMorph(),
-        new ReporterBlockMorph(true),
-        new ArrowMorph(),
-        new MultiArgMorph(),
-        new FunctionSlotMorph(),
-        new ReporterSlotMorph(),
-        new ReporterSlotMorph(true),
-//        new DialogBoxMorph('Dialog Box'),
-//        new InputFieldMorph('Input Field')
-        new RingMorph(),
-        new RingCommandSlotMorph(),
-        new RingReporterSlotMorph(),
-        new RingReporterSlotMorph(true)
-    ];
-*/
-};
 
 
 // SyntaxElementMorph //////////////////////////////////////////////////
@@ -244,6 +200,7 @@ WorldMorph.prototype.customMorphs = function () {
 SyntaxElementMorph.prototype = new Morph();
 SyntaxElementMorph.prototype.constructor = SyntaxElementMorph;
 SyntaxElementMorph.uber = Morph.prototype;
+SyntaxElementMorph.prototype.super = TriggerMorph.prototype;
 
 // SyntaxElementMorph preferences settings:
 
@@ -2025,6 +1982,8 @@ function BlockMorph() {
     this.init();
 }
 
+BlockMorph.prototype.toggle = false;
+
 BlockMorph.prototype.init = function () {
     this.selector = null; // name of method to be triggered
     this.blockSpec = ''; // formal description of label and arguments
@@ -2037,6 +1996,16 @@ BlockMorph.prototype.init = function () {
     BlockMorph.uber.init.call(this);
     this.color = new Color(0, 17, 173);
     this.cashedInputs = null;
+    this.hint = "hello";
+    this.bubbleHelp = TriggerMorph.prototype.bubbleHelp
+    this.popUpbubbleHelp = TriggerMorph.prototype.popUpbubbleHelp;
+    this.needsHint = true
+};
+
+BlockMorph.prototype.mouseEnter = function () {
+    if (this.hint && this.toggle && this.needsHint) {
+            this.bubbleHelp(this.hint);
+        };
 };
 
 BlockMorph.prototype.receiver = function () {
