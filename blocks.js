@@ -1996,10 +1996,10 @@ BlockMorph.prototype.init = function () {
     BlockMorph.uber.init.call(this);
     this.color = new Color(0, 17, 173);
     this.cashedInputs = null;
-    this.hint = "hello";
+    this.hint = "hint";
     this.bubbleHelp = TriggerMorph.prototype.bubbleHelp
     this.popUpbubbleHelp = TriggerMorph.prototype.popUpbubbleHelp;
-    this.needsHint = true
+    this.needsHint = false;
 };
 
 BlockMorph.prototype.mouseEnter = function () {

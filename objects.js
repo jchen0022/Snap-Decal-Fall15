@@ -208,218 +208,286 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'motion',
             spec: 'move %n steps',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         turn: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'turn %clockwise %n degrees',
-            defaults: [15]
+            defaults: [15],
+            needsHint: false,
+            hint: "custom hint"
         },
         turnLeft: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'turn %counterclockwise %n degrees',
-            defaults: [15]
+            defaults: [15],
+            needsHint: false,
+            hint: "custom hint"
         },
         setHeading: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
-            spec: 'point in direction %dir'
+            spec: 'point in direction %dir',
+            needsHint: false,
+            hint: "custom hint"
         },
         doFaceTowards: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
-            spec: 'point towards %dst'
+            spec: 'point towards %dst',
+            needsHint: false,
+            hint: "custom hint"
         },
         gotoXY: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'go to x: %n y: %n',
-            defaults: [0, 0]
+            defaults: [0, 0],
+            needsHint: false,
+            hint: "custom hint"
         },
         doGotoObject: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
-            spec: 'go to %dst'
+            spec: 'go to %dst',
+            needsHint: false,
+            hint: "custom hint"
         },
         doGlide: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'glide %n secs to x: %n y: %n',
-            defaults: [1, 0, 0]
+            defaults: [1, 0, 0],
+            needsHint: false,
+            hint: "custom hint"
         },
         changeXPosition: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'change x by %n',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         setXPosition: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'set x to %n',
-            defaults: [0]
+            defaults: [0],
+            needsHint: false,
+            hint: "custom hint"
         },
         changeYPosition: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'change y by %n',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         setYPosition: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
             spec: 'set y to %n',
-            defaults: [0]
+            defaults: [0],
+            needsHint: false,
+            hint: "custom hint"
         },
         bounceOffEdge: {
             only: SpriteMorph,
             type: 'command',
             category: 'motion',
-            spec: 'if on edge, bounce'
+            spec: 'if on edge, bounce',
+            needsHint: false,
+            hint: "custom hint"
         },
         xPosition: {
             only: SpriteMorph,
             type: 'reporter',
             category: 'motion',
-            spec: 'x position'
+            spec: 'x position',
+            needsHint: false,
+            hint: "custom hint"
         },
         yPosition: {
             only: SpriteMorph,
             type: 'reporter',
             category: 'motion',
-            spec: 'y position'
+            spec: 'y position',
+            needsHint: false,
+            hint: "custom hint"
         },
         direction: {
             only: SpriteMorph,
             type: 'reporter',
             category: 'motion',
-            spec: 'direction'
+            spec: 'direction',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Looks
         doSwitchToCostume: {
             type: 'command',
             category: 'looks',
-            spec: 'switch to costume %cst'
+            spec: 'switch to costume %cst',
+            needsHint: false,
+            hint: "custom hint"
         },
         doWearNextCostume: {
             type: 'command',
             category: 'looks',
-            spec: 'next costume'
+            spec: 'next costume',
+            needsHint: false,
+            hint: "custom hint"
         },
         getCostumeIdx: {
             type: 'reporter',
             category: 'looks',
-            spec: 'costume #'
+            spec: 'costume #',
+            needsHint: false,
+            hint: "custom hint"
         },
         doSayFor: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'say %s for %n secs',
-            defaults: [localize('Hello!'), 2]
+            defaults: [localize('Hello!'), 2],
+            needsHint: false,
+            hint: "custom hint"
         },
         bubble: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'say %s',
-            defaults: [localize('Hello!')]
+            defaults: [localize('Hello!')],
+            needsHint: false,
+            hint: "custom hint"
         },
         doThinkFor: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'think %s for %n secs',
-            defaults: [localize('Hmm...'), 2]
+            defaults: [localize('Hmm...'), 2],
+            needsHint: false,
+            hint: "custom hint"
         },
         doThink: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'think %s',
-            defaults: [localize('Hmm...')]
+            defaults: [localize('Hmm...')],
+            needsHint: false,
+            hint: "custom hint"
         },
         changeEffect: {
             type: 'command',
             category: 'looks',
             spec: 'change %eff effect by %n',
-            defaults: [null, 25]
+            defaults: [null, 25],
+            needsHint: false,
+            hint: "custom hint"
         },
         setEffect: {
             type: 'command',
             category: 'looks',
             spec: 'set %eff effect to %n',
-            defaults: [null, 0]
+            defaults: [null, 0],
+            needsHint: false,
+            hint: "custom hint"
         },
         clearEffects: {
             type: 'command',
             category: 'looks',
-            spec: 'clear graphic effects'
+            spec: 'clear graphic effects',
+            needsHint: false,
+            hint: "custom hint"
         },
         changeScale: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'change size by %n',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         setScale: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'set size to %n %',
-            defaults: [100]
+            defaults: [100],
+            needsHint: false,
+            hint: "custom hint"
         },
         getScale: {
             only: SpriteMorph,
             type: 'reporter',
             category: 'looks',
-            spec: 'size'
+            spec: 'size',
+            needsHint: false,
+            hint: "custom hint"
         },
         show: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
-            spec: 'show'
+            spec: 'show',
+            needsHint: false,
+            hint: "custom hint"
         },
         hide: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
-            spec: 'hide'
+            spec: 'hide',
+            needsHint: false,
+            hint: "custom hint"
         },
         comeToFront: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
-            spec: 'go to front'
+            spec: 'go to front',
+            needsHint: false,
+            hint: "custom hint"
         },
         goBack: {
             only: SpriteMorph,
             type: 'command',
             category: 'looks',
             spec: 'go back %n layers',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doScreenshot: {
             type: 'command',
             category: 'looks',
             spec: 'save %imgsource as costume named %s',
-            defaults: [['pen trails'], localize('screenshot')]
+            defaults: [['pen trails'], localize('screenshot')],
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Looks - Debugging primitives for development mode
@@ -447,46 +515,62 @@ SpriteMorph.prototype.initBlocks = function () {
         playSound: {
             type: 'command',
             category: 'sound',
-            spec: 'play sound %snd'
+            spec: 'play sound %snd',
+            needsHint: false,
+            hint: "custom hint"
         },
         doPlaySoundUntilDone: {
             type: 'command',
             category: 'sound',
-            spec: 'play sound %snd until done'
+            spec: 'play sound %snd until done',
+            needsHint: false,
+            hint: "custom hint"
         },
         doStopAllSounds: {
             type: 'command',
             category: 'sound',
-            spec: 'stop all sounds'
+            spec: 'stop all sounds',
+            needsHint: false,
+            hint: "custom hint"
         },
         doRest: {
             type: 'command',
             category: 'sound',
             spec: 'rest for %n beats',
-            defaults: [0.2]
+            defaults: [0.2],
+            needsHint: false,
+            hint: "custom hint"
         },
         doPlayNote: {
             type: 'command',
             category: 'sound',
             spec: 'play note %n for %n beats',
-            defaults: [60, 0.5]
+            defaults: [60, 0.5],
+            needsHint: false,
+            hint: "custom hint"
         },
         doChangeTempo: {
             type: 'command',
             category: 'sound',
             spec: 'change tempo by %n',
-            defaults: [20]
+            defaults: [20],
+            needsHint: false,
+            hint: "custom hint"
         },
         doSetTempo: {
             type: 'command',
             category: 'sound',
             spec: 'set tempo to %n bpm',
-            defaults: [60]
+            defaults: [60],
+            needsHint: false,
+            hint: "custom hint"
         },
         getTempo: {
             type: 'reporter',
             category: 'sound',
-            spec: 'tempo'
+            spec: 'tempo',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Sound - Debugging primitives for development mode
@@ -494,92 +578,120 @@ SpriteMorph.prototype.initBlocks = function () {
             dev: true,
             type: 'reporter',
             category: 'sound',
-            spec: 'jukebox'
+            spec: 'jukebox',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Pen
         clear: {
             type: 'command',
             category: 'pen',
-            spec: 'clear'
+            spec: 'clear',
+            needsHint: false,
+            hint: "custom hint"
         },
         down: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
-            spec: 'pen down'
+            spec: 'pen down',
+            needsHint: false,
+            hint: "custom hint"
         },
         up: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
-            spec: 'pen up'
+            spec: 'pen up',
+            needsHint: false,
+            hint: "custom hint"
         },
         setColor: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
-            spec: 'set pen color to %clr'
+            spec: 'set pen color to %clr',
+            needsHint: false,
+            hint: "custom hint"
         },
         changeHue: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'change pen color by %n',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         setHue: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'set pen color to %n',
-            defaults: [0]
+            defaults: [0],
+            needsHint: false,
+            hint: "custom hint"
         },
         changeBrightness: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'change pen shade by %n',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         setBrightness: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'set pen shade to %n',
-            defaults: [100]
+            defaults: [100],
+            needsHint: false,
+            hint: "custom hint"
         },
         changeSize: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'change pen size by %n',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         setSize: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
             spec: 'set pen size to %n',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doStamp: {
             only: SpriteMorph,
             type: 'command',
             category: 'pen',
-            spec: 'stamp'
+            spec: 'stamp',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Control
         receiveGo: {
             type: 'hat',
             category: 'control',
-            spec: 'when %greenflag clicked'
+            spec: 'when %greenflag clicked',
+            needsHint: false,
+            hint: "custom hint"
         },
         receiveKey: {
             type: 'hat',
             category: 'control',
-            spec: 'when %keyHat key pressed'
+            spec: 'when %keyHat key pressed',
+            needsHint: false,
+            hint: "custom hint"
         },
 
     /* migrated to a newer block version:
@@ -595,64 +707,88 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'hat',
             category: 'control',
             spec: 'when I am %interaction',
-            defaults: ['clicked']
+            defaults: ['clicked'],
+            needsHint: false,
+            hint: "custom hint"
         },
         receiveMessage: {
             type: 'hat',
             category: 'control',
-            spec: 'when I receive %msgHat'
+            spec: 'when I receive %msgHat',
+            needsHint: false,
+            hint: "custom hint"
         },
         doBroadcast: {
             type: 'command',
             category: 'control',
-            spec: 'broadcast %msg'
+            spec: 'broadcast %msg',
+            needsHint: false,
+            hint: "custom hint"
         },
         doBroadcastAndWait: {
             type: 'command',
             category: 'control',
-            spec: 'broadcast %msg and wait'
+            spec: 'broadcast %msg and wait',
+            needsHint: false,
+            hint: "custom hint"
         },
         getLastMessage: {
             type: 'reporter',
             category: 'control',
-            spec: 'message'
+            spec: 'message',
+            needsHint: false,
+            hint: "custom hint"
         },
         doWait: {
             type: 'command',
             category: 'control',
             spec: 'wait %n secs',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doWaitUntil: {
             type: 'command',
             category: 'control',
-            spec: 'wait until %b'
+            spec: 'wait until %b',
+            needsHint: false,
+            hint: "custom hint"
         },
         doForever: {
             type: 'command',
             category: 'control',
-            spec: 'forever %c'
+            spec: 'forever %c',
+            needsHint: false,
+            hint: "custom hint"
         },
         doRepeat: {
             type: 'command',
             category: 'control',
             spec: 'repeat %n %c',
-            defaults: [10]
+            defaults: [10],
+            needsHint: false,
+            hint: "custom hint"
         },
         doUntil: {
             type: 'command',
             category: 'control',
-            spec: 'repeat until %b %c'
+            spec: 'repeat until %b %c',
+            needsHint: false,
+            hint: "custom hint"
         },
         doIf: {
             type: 'command',
             category: 'control',
-            spec: 'if %b %c'
+            spec: 'if %b %c',
+            needsHint: false,
+            hint: "custom hint"
         },
         doIfElse: {
             type: 'command',
             category: 'control',
-            spec: 'if %b %c else %c'
+            spec: 'if %b %c else %c',
+            needsHint: false,
+            hint: "custom hint"
         },
 
     /* migrated to a newer block version:
@@ -672,27 +808,37 @@ SpriteMorph.prototype.initBlocks = function () {
         doStopThis: {
             type: 'command',
             category: 'control',
-            spec: 'stop %stopChoices'
+            spec: 'stop %stopChoices',
+            needsHint: false,
+            hint: "custom hint"
         },
         doStopOthers: {
             type: 'command',
             category: 'control',
-            spec: 'stop %stopOthersChoices'
+            spec: 'stop %stopOthersChoices',
+            needsHint: false,
+            hint: "custom hint"
         },
         doRun: {
             type: 'command',
             category: 'control',
-            spec: 'run %cmdRing %inputs'
+            spec: 'run %cmdRing %inputs',
+            needsHint: false,
+            hint: "custom hint"
         },
         fork: {
             type: 'command',
             category: 'control',
-            spec: 'launch %cmdRing %inputs'
+            spec: 'launch %cmdRing %inputs',
+            needsHint: false,
+            hint: "custom hint"
         },
         evaluate: {
             type: 'reporter',
             category: 'control',
-            spec: 'call %repRing %inputs'
+            spec: 'call %repRing %inputs',
+            needsHint: false,
+            hint: "custom hint"
         },
     /*
         doRunWithInputList: {
@@ -716,7 +862,9 @@ SpriteMorph.prototype.initBlocks = function () {
         doReport: {
             type: 'command',
             category: 'control',
-            spec: 'report %s'
+            spec: 'report %s',
+            needsHint: false,
+            hint: "custom hint"
         },
     /*
         doStopBlock: { // migrated to a newer block version
@@ -728,34 +876,46 @@ SpriteMorph.prototype.initBlocks = function () {
         doCallCC: {
             type: 'command',
             category: 'control',
-            spec: 'run %cmdRing w/continuation'
+            spec: 'run %cmdRing w/continuation',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportCallCC: {
             type: 'reporter',
             category: 'control',
-            spec: 'call %cmdRing w/continuation'
+            spec: 'call %cmdRing w/continuation',
+            needsHint: false,
+            hint: "custom hint"
         },
         doWarp: {
             type: 'command',
             category: 'other',
-            spec: 'warp %c'
+            spec: 'warp %c',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Cloning - very experimental
         receiveOnClone: {
             type: 'hat',
             category: 'control',
-            spec: 'when I start as a clone'
+            spec: 'when I start as a clone',
+            needsHint: false,
+            hint: "custom hint"
         },
         createClone: {
             type: 'command',
             category: 'control',
-            spec: 'create a clone of %cln'
+            spec: 'create a clone of %cln',
+            needsHint: false,
+            hint: "custom hint"
         },
         removeClone: {
             type: 'command',
             category: 'control',
-            spec: 'delete this clone'
+            spec: 'delete this clone',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Debugging - pausing
@@ -763,7 +923,9 @@ SpriteMorph.prototype.initBlocks = function () {
         doPauseAll: {
             type: 'command',
             category: 'control',
-            spec: 'pause all %pause'
+            spec: 'pause all %pause',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Sensing
@@ -772,55 +934,73 @@ SpriteMorph.prototype.initBlocks = function () {
             only: SpriteMorph,
             type: 'predicate',
             category: 'sensing',
-            spec: 'touching %col ?'
+            spec: 'touching %col ?',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTouchingColor: {
             only: SpriteMorph,
             type: 'predicate',
             category: 'sensing',
-            spec: 'touching %clr ?'
+            spec: 'touching %clr ?',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportColorIsTouchingColor: {
             only: SpriteMorph,
             type: 'predicate',
             category: 'sensing',
-            spec: 'color %clr is touching %clr ?'
+            spec: 'color %clr is touching %clr ?',
+            needsHint: false,
+            hint: "custom hint"
         },
         colorFiltered: {
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'filtered for %clr'
+            spec: 'filtered for %clr',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportStackSize: {
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'stack size'
+            spec: 'stack size',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportFrameCount: {
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'frames'
+            spec: 'frames',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportThreadCount: {
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'processes'
+            spec: 'processes',
+            needsHint: false,
+            hint: "custom hint"
         },
         doAsk: {
             type: 'command',
             category: 'sensing',
             spec: 'ask %s and wait',
-            defaults: [localize('what\'s your name?')]
+            defaults: [localize('what\'s your name?')],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportLastAnswer: { // retained for legacy compatibility
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'answer'
+            spec: 'answer',
+            needsHint: false,
+            hint: "custom hint"
         },
         getLastAnswer: {
             type: 'reporter',
@@ -830,70 +1010,96 @@ SpriteMorph.prototype.initBlocks = function () {
         reportMouseX: {
             type: 'reporter',
             category: 'sensing',
-            spec: 'mouse x'
+            spec: 'mouse x',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportMouseY: {
             type: 'reporter',
             category: 'sensing',
-            spec: 'mouse y'
+            spec: 'mouse y',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportMouseDown: {
             type: 'predicate',
             category: 'sensing',
-            spec: 'mouse down?'
+            spec: 'mouse down?',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportKeyPressed: {
             type: 'predicate',
             category: 'sensing',
-            spec: 'key %key pressed?'
+            spec: 'key %key pressed?',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportDistanceTo: {
             type: 'reporter',
             category: 'sensing',
-            spec: 'distance to %dst'
+            spec: 'distance to %dst',
+            needsHint: false,
+            hint: "custom hint"
         },
         doResetTimer: {
             type: 'command',
             category: 'sensing',
-            spec: 'reset timer'
+            spec: 'reset timer',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTimer: { // retained for legacy compatibility
             dev: true,
             type: 'reporter',
             category: 'sensing',
-            spec: 'timer'
+            spec: 'timer',
+            needsHint: false,
+            hint: "custom hint"
         },
         getTimer: {
             type: 'reporter',
             category: 'sensing',
-            spec: 'timer'
+            spec: 'timer',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportAttributeOf: {
             type: 'reporter',
             category: 'sensing',
             spec: '%att of %spr',
-            defaults: [['costume #']]
+            defaults: [['costume #']],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportURL: {
             type: 'reporter',
             category: 'sensing',
             spec: 'http:// %s',
-            defaults: ['snap.berkeley.edu']
+            defaults: ['snap.berkeley.edu'],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportIsFastTracking: {
             type: 'predicate',
             category: 'sensing',
-            spec: 'turbo mode?'
+            spec: 'turbo mode?',
+            needsHint: false,
+            hint: "custom hint"
         },
         doSetFastTracking: {
             type: 'command',
             category: 'sensing',
-            spec: 'set turbo mode to %b'
+            spec: 'set turbo mode to %b',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportDate: {
             type: 'reporter',
             category: 'sensing',
-            spec: 'current %dates'
+            spec: 'current %dates',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Operators
@@ -901,174 +1107,236 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'ring',
             category: 'other',
             spec: '%rc %ringparms',
-            alias: 'command ring lambda'
+            alias: 'command ring lambda',
+            needsHint: false,
+            hint: "custom hint"
         },
         reifyReporter: {
             type: 'ring',
             category: 'other',
             spec: '%rr %ringparms',
-            alias: 'reporter ring lambda'
+            alias: 'reporter ring lambda',
+            needsHint: false,
+            hint: "custom hint"
         },
         reifyPredicate: {
             type: 'ring',
             category: 'other',
             spec: '%rp %ringparms',
-            alias: 'predicate ring lambda'
+            alias: 'predicate ring lambda',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportSum: {
             type: 'reporter',
             category: 'operators',
-            spec: '%n + %n'
+            spec: '%n + %n',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportFloorDiv: {
             type: 'reporter',
             category: 'operators',
-            spec: '%n // %n'
+            spec: '%n // %n',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportDifference: {
             type: 'reporter',
             category: 'operators',
             spec: '%n \u2212 %n',
-            alias: '-'
+            alias: '-',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportProduct: {
             type: 'reporter',
             category: 'operators',
             spec: '%n \u00D7 %n',
-            alias: '*'
+            alias: '*',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportQuotient: {
             type: 'reporter',
             category: 'operators',
-            spec: '%n / %n' // '%n \u00F7 %n'
+            spec: '%n / %n', // '%n \u00F7 %n'
+            needsHint: false,
+            hint: "custom hint"
         },
         reportRound: {
             type: 'reporter',
             category: 'operators',
-            spec: 'round %n'
+            spec: 'round %n',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportMonadic: {
             type: 'reporter',
             category: 'operators',
             spec: '%fun of %n',
-            defaults: [null, 10]
+            defaults: [null, 10],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportModulus: {
             type: 'reporter',
             category: 'operators',
-            spec: '%n mod %n'
+            spec: '%n mod %n',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportRandom: {
             type: 'reporter',
             category: 'operators',
             spec: 'pick random %n to %n',
-            defaults: [1, 10]
+            defaults: [1, 10],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportLessThan: {
             type: 'predicate',
             category: 'operators',
-            spec: '%s < %s'
+            spec: '%s < %s',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportEquals: {
             type: 'predicate',
             category: 'operators',
-            spec: '%s = %s'
+            spec: '%s = %s',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportGreaterThan: {
             type: 'predicate',
             category: 'operators',
-            spec: '%s > %s'
+            spec: '%s > %s',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportAnd: {
             type: 'predicate',
             category: 'operators',
-            spec: '%b and %b'
+            spec: '%b and %b',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportOr: {
             type: 'predicate',
             category: 'operators',
-            spec: '%b or %b'
+            spec: '%b or %b',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportNot: {
             type: 'predicate',
             category: 'operators',
-            spec: 'not %b'
+            spec: 'not %b',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTrue: {
             type: 'predicate',
             category: 'operators',
-            spec: 'true'
+            spec: 'true',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportFalse: {
             type: 'predicate',
             category: 'operators',
-            spec: 'false'
+            spec: 'false',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportJoinWords: {
             type: 'reporter',
             category: 'operators',
             spec: 'join %words',
-            defaults: [localize('hello') + ' ', localize('world')]
+            defaults: [localize('hello') + ' ', localize('world')],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportLetter: {
             type: 'reporter',
             category: 'operators',
             spec: 'letter %n of %s',
-            defaults: [1, localize('world')]
+            defaults: [1, localize('world')],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportStringSize: {
             type: 'reporter',
             category: 'operators',
             spec: 'length of %s',
-            defaults: [localize('world')]
+            defaults: [localize('world')],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportUnicode: {
             type: 'reporter',
             category: 'operators',
             spec: 'unicode of %s',
-            defaults: ['a']
+            defaults: ['a'],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportUnicodeAsLetter: {
             type: 'reporter',
             category: 'operators',
             spec: 'unicode %n as letter',
-            defaults: [65]
+            defaults: [65],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportIsA: {
             type: 'predicate',
             category: 'operators',
             spec: 'is %s a %typ ?',
-            defaults: [5]
+            defaults: [5],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportIsIdentical: {
             type: 'predicate',
             category: 'operators',
-            spec: 'is %s identical to %s ?'
+            spec: 'is %s identical to %s ?',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTextSplit: {
             type: 'reporter',
             category: 'operators',
             spec: 'split %s by %delim',
-            defaults: [localize('hello') + ' ' + localize('world'), " "]
+            defaults: [localize('hello') + ' ' + localize('world'), " "],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportJSFunction: { // experimental
             type: 'reporter',
             category: 'operators',
-            spec: 'JavaScript function ( %mult%s ) { %code }'
+            spec: 'JavaScript function ( %mult%s ) { %code }',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTypeOf: { // only in dev mode for debugging
             dev: true,
             type: 'reporter',
             category: 'operators',
             spec: 'type of %s',
-            defaults: [5]
+            defaults: [5],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportTextFunction: { // only in dev mode - experimental
             dev: true,
             type: 'reporter',
             category: 'operators',
             spec: '%txtfun of %s',
-            defaults: [null, "Abelson & Sussman"]
+            defaults: [null, "Abelson & Sussman"],
+            needsHint: false,
+            hint: "custom hint"
         },
 
     /*
@@ -1089,87 +1357,117 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'variables',
             spec: 'set %var to %s',
-            defaults: [null, 0]
+            defaults: [null, 0],
+            needsHint: false,
+            hint: "custom hint"
         },
         doChangeVar: {
             type: 'command',
             category: 'variables',
             spec: 'change %var by %n',
-            defaults: [null, 1]
+            defaults: [null, 1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doShowVar: {
             type: 'command',
             category: 'variables',
-            spec: 'show variable %var'
+            spec: 'show variable %var',
+            needsHint: false,
+            hint: "custom hint"
         },
         doHideVar: {
             type: 'command',
             category: 'variables',
-            spec: 'hide variable %var'
+            spec: 'hide variable %var',
+            needsHint: false,
+            hint: "custom hint"
         },
         doDeclareVariables: {
             type: 'command',
             category: 'other',
-            spec: 'script variables %scriptVars'
+            spec: 'script variables %scriptVars',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // inheritance - experimental
         doDeleteAttr: {
             type: 'command',
             category: 'variables',
-            spec: 'delete %shd'
+            spec: 'delete %shd',
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Lists
         reportNewList: {
             type: 'reporter',
             category: 'lists',
-            spec: 'list %exp'
+            spec: 'list %exp',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportCONS: {
             type: 'reporter',
             category: 'lists',
-            spec: '%s in front of %l'
+            spec: '%s in front of %l',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportListItem: {
             type: 'reporter',
             category: 'lists',
             spec: 'item %idx of %l',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         reportCDR: {
             type: 'reporter',
             category: 'lists',
-            spec: 'all but first of %l'
+            spec: 'all but first of %l',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportListLength: {
             type: 'reporter',
             category: 'lists',
-            spec: 'length of %l'
+            spec: 'length of %l',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportListContainsItem: {
             type: 'predicate',
             category: 'lists',
             spec: '%l contains %s',
-            defaults: [null, localize('thing')]
+            defaults: [null, localize('thing')],
+            needsHint: false,
+            hint: "custom hint"
         },
         doAddToList: {
             type: 'command',
             category: 'lists',
             spec: 'add %s to %l',
-            defaults: [localize('thing')]
+            defaults: [localize('thing')],
+            needsHint: false,
+            hint: "custom hint"
         },
         doDeleteFromList: {
             type: 'command',
             category: 'lists',
             spec: 'delete %ida of %l',
-            defaults: [1]
+            defaults: [1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doInsertInList: {
             type: 'command',
             category: 'lists',
             spec: 'insert %s at %idx of %l',
-            defaults: [localize('thing'), 1]
+            defaults: [localize('thing'), 1],
+            needsHint: false,
+            hint: "custom hint"
         },
         doReplaceInList: {
             type: 'command',
@@ -1183,37 +1481,49 @@ SpriteMorph.prototype.initBlocks = function () {
             dev: true,
             type: 'reporter',
             category: 'lists',
-            spec: 'map %repRing over %l'
+            spec: 'map %repRing over %l',
+            needsHint: false,
+            hint: "custom hint"
         },
         doForEach: {
             dev: true,
             type: 'command',
             category: 'lists',
             spec: 'for %upvar in %l %cs',
-            defaults: [localize('each item')]
+            defaults: [localize('each item')],
+            needsHint: false,
+            hint: "custom hint"
         },
 
         // Code mapping - experimental
         doMapCodeOrHeader: { // experimental
             type: 'command',
             category: 'other',
-            spec: 'map %cmdRing to %codeKind %code'
+            spec: 'map %cmdRing to %codeKind %code',
+            needsHint: false,
+            hint: "custom hint"
         },
         doMapStringCode: { // experimental
             type: 'command',
             category: 'other',
             spec: 'map String to code %code',
-            defaults: ['<#1>']
+            defaults: ['<#1>'],
+            needsHint: false,
+            hint: "custom hint"
         },
         doMapListCode: { // experimental
             type: 'command',
             category: 'other',
-            spec: 'map %codeListPart of %codeListKind to code %code'
+            spec: 'map %codeListPart of %codeListKind to code %code',
+            needsHint: false,
+            hint: "custom hint"
         },
         reportMappedCode: { // experimental
             type: 'reporter',
             category: 'other',
-            spec: 'code of %cmdRing'
+            spec: 'code of %cmdRing',
+            needsHint: false,
+            hint: "custom hint"
         }
     };
 };
@@ -1626,6 +1936,10 @@ SpriteMorph.prototype.blockForSelector = function (selector, setDefaults) {
     block.color = this.blockColor[info.category];
     block.category = info.category;
     block.selector = migration ? migration.selector : selector;
+    if (info.needsHint == true){
+        block.needsHint = true;
+        block.hint = info.hint;
+    }
     if (contains(['reifyReporter', 'reifyPredicate'], block.selector)) {
         block.isStatic = true;
     }
