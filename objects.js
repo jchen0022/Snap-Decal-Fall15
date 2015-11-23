@@ -209,8 +209,8 @@ SpriteMorph.prototype.initBlocks = function () {
             category: 'motion',
             spec: 'move %n steps',
             defaults: [10],
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Moves sprite given amount of steps in the direction of the point"
         },
         turn: {
             only: SpriteMorph,
@@ -313,8 +313,8 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'motion',
             spec: 'if on edge, bounce',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "If the arrowhead of the sprite is on the edge, change directions"
         },
         xPosition: {
             only: SpriteMorph,
@@ -346,8 +346,8 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'looks',
             spec: 'switch to costume %cst',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "change the sprite to another shape"
         },
         doWearNextCostume: {
             type: 'command',
@@ -404,8 +404,8 @@ SpriteMorph.prototype.initBlocks = function () {
             category: 'looks',
             spec: 'change %eff effect by %n',
             defaults: [null, 25],
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Specify the looking of the sprite"
         },
         setEffect: {
             type: 'command',
@@ -683,8 +683,8 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'hat',
             category: 'control',
             spec: 'when %greenflag clicked',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Click to start the script"
         },
         receiveKey: {
             type: 'hat',
@@ -863,8 +863,8 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'control',
             spec: 'report %s',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Returns the expected result"
         },
     /*
         doStopBlock: { // migrated to a newer block version
@@ -891,8 +891,8 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'command',
             category: 'other',
             spec: 'warp %c',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Runs the code inside it without a delay"
         },
 
         // Cloning - very experimental
@@ -1077,15 +1077,15 @@ SpriteMorph.prototype.initBlocks = function () {
             category: 'sensing',
             spec: 'http:// %s',
             defaults: ['snap.berkeley.edu'],
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Return the source code of the specificed url"
         },
         reportIsFastTracking: {
             type: 'predicate',
             category: 'sensing',
             spec: 'turbo mode?',
-            needsHint: false,
-            hint: "custom hint"
+            needsHint: true,
+            hint: "Check if code is in turbo mode"
         },
         doSetFastTracking: {
             type: 'command',
