@@ -2008,6 +2008,12 @@ BlockMorph.prototype.mouseEnter = function () {
         };
 };
 
+BlockMorph.prototype.mouseLeave = function () {
+    if (this.hint) {
+        this.world().hand.destroyTemporaries();
+    }
+};
+
 BlockMorph.prototype.receiver = function () {
     // answer the object to which I apply (whose method I represent)
     var up = this.parent;
