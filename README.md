@@ -1,6 +1,9 @@
 Snap-Decal Final Project
+
 Contributors: Jerry Chen, Nicolas Raga, JingSong Chu
+
 Pop-up hints for blocks.
+
 Files to change: blocks.js, gui.js, objects.js
 
 blocks.js - add attributes and properties for displaying hints
