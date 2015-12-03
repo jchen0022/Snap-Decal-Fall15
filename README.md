@@ -1,4 +1,4 @@
-Snap-Decal Final Project
+<b>Snap-Decal Final Project</b>
 
 Contributors: Jerry Chen, Nicolas Raga, JingSong Chu
 
